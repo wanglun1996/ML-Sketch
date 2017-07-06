@@ -1,0 +1,13 @@
+[
+
+  {
+    "file": "drawing/out/gfs_ae_seq",
+    "y_label": "AAE Ratio",
+    "style": 4,
+    "separator": ",",
+    "ytick.lim": [0.3, 0.5],
+    "xtick.lim": [0, 24],
+    "xtick.interval": 2
+  }
+
+ ]

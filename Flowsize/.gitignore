@@ -1,0 +1,10 @@
+.idea
+~
+t
+FlowData/*
+Para/*
+MLData/*
+cmake-build-debug
+result
+a.out
+bin

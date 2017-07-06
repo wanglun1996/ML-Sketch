@@ -1,0 +1,11 @@
+[
+
+  {
+    "file": "drawing/out/ae_sample_rate",
+    "chart.type": "bar",
+    "y_label": "Avg absolute error",
+    "style": 4,
+    "separator": ","
+  }
+
+ ]
