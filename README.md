@@ -7,4 +7,4 @@ Under the "System Implementation" directory are the systematic code for ML-Sketc
 
 Under the other three directories are the experimental codes for three case studies mentioned in our paper (The link will be available after our paper being published.)
 
-The main contributor of these codes are Tong Yang, PKU, Lun Wang, PKU, Jie Jiang, PKU, Junzhi Gong, PKU and Lingtong Liu, XiDian University. For any further questions, please contact Lun Wang by lun.wang@pku.edu.cn or wanglun@berkeley.edu
+The main contributor of these codes are Tong Yang, PKU, Lun Wang, PKU, Jie Jiang, PKU, Junzhi Gong, PKU and Lingtong Liu, XiDian University. For any further questions, please contact Lun Wang by lun.wang@pku.edu.cn or wanglun@berkeley.edu.

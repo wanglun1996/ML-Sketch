@@ -1,0 +1,17 @@
+#location:
+rte.app.mk  /home/vivian/opt/dpdk-16.11/mk/
+
+
+# usage:
+## build:
+cd sketch_expmt
+make sketch
+make
+
+## usage:
+sudo ./sketch_expmt -c 7 -n 2 -- -T 2 -D 5 -W 10240
+
+## clean
+make sketch_clean
+make clean
+

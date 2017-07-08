@@ -1,0 +1,8 @@
+Run the following instructions to build
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+
+Executable file will be generated in `/bin` folder
+
