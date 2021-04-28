@@ -3,8 +3,8 @@
 CMSketch::CMSketch(uint d, uint w):d(d), w(w){
 	sketch = new ushort*[d];
 	for(uint i = 0; i < d; ++i){
-		sketch[i] = new ushort[w];
-		memset(sketch[i], 0, sizeof(sketch[i]));
+		 sketch[i] = new ushort[w]();
+		 
 	}
 	hf = new HashFunction();
 	para = new float[2*d-1];
@@ -31,7 +31,7 @@ void CMSketch::Insert(cuc *str){
 }
 
 uint CMSketch::Query(cuc *str, bool ml){
-	memset(t, 0, sizeof(t));
+	 
 	if(!ml){
 		uint Min = INF_SHORT;
 		for(uint i = 0; i < d; ++i){

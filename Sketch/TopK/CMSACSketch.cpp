@@ -4,8 +4,8 @@ CMSACSketch::CMSACSketch(uint d, uint w):d(d), w(w){
 	srand(time(0));
 	sketch = new uchar*[d];
 	for(uint i = 0; i < d; ++i){
-		sketch[i] = new uchar[w];
-		memset(sketch[i], 0, sizeof(sketch[i]));
+		sketch[i] = new uchar[w]();
+		 
 	}
 	hf = new HashFunction();
 	r = new uint[8];
@@ -64,7 +64,7 @@ void CMSACSketch::Insert(cuc *str){
 }
 
 uint CMSACSketch::Query(cuc *str, bool ml){
-	memset(t, 0, sizeof(t));
+	 
 	if(!ml){
 		uint Min = INF_SAC;
 		for(uint i = 0; i < d; ++i){
@@ -88,7 +88,7 @@ uint CMSACSketch::Query(cuc *str, bool ml){
 }
 
 void CMSACSketch::PrintCounter(cuc* str){
-	memset(t, 0, sizeof(t));
+	 
 	for(uint i = 0; i < d; ++i){
 		uint cid = hf->Str2Int(str, i)%w;
 		t[i] = CQuery(i, cid);

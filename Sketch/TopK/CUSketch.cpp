@@ -3,8 +3,8 @@
 CUSketch::CUSketch(uint d, uint w):d(d), w(w){
 	sketch = new ushort*[d];
 	for(uint i = 0; i < d; ++i){
-		sketch[i] = new ushort[w];
-		memset(sketch[i], 0, sizeof(sketch[i]));
+		 sketch[i] = new ushort[w]();
+		 
 	}
 	hf = new HashFunction();
 	para = new float[2*d-1];
@@ -24,7 +24,7 @@ CUSketch::~CUSketch(){
 }
 
 void CUSketch::Insert(cuc *str){
-	memset(t, 0, sizeof(t));
+	 
 	uint Min = INF_SHORT;
 	for(uint i = 0; i < d; ++i){
 		uint cid = hf->Str2Int(str, i)%w;
@@ -40,7 +40,7 @@ void CUSketch::Insert(cuc *str){
 }
 
 uint CUSketch::Query(cuc *str, bool ml){
-	memset(t, 0, sizeof(t));
+	 
 	if(!ml){
 		uint Min = INF_SHORT;
 		for(uint i = 0; i < d; ++i){
@@ -64,7 +64,7 @@ uint CUSketch::Query(cuc *str, bool ml){
 }
 
 void CUSketch::PrintCounter(cuc* str){
-	memset(t, 0, sizeof(t));
+	 
 	for(uint i = 0; i < d; ++i){
 		uint cid = hf->Str2Int(str, i)%w;
 		t[i] = sketch[i][cid];
