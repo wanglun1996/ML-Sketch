@@ -4,8 +4,8 @@ PSketch::PSketch(uint d, uint w):d(d), w(w){
 	srand(time(0));
 	sketch = new ushort*[d];
 	for(uint i = 0; i < d; ++i){
-		sketch[i] = new ushort[w];
-		memset(sketch[i], 0, sizeof(sketch[i]));
+		 sketch[i] = new ushort[w]();
+		 
 	}
 	hf = new HashFunction();
 	para = new float[2*d-1];
@@ -38,7 +38,7 @@ uint PSketch::Query(cuc *str, bool ml){
 		return sum;
 	}
 	else{
-		memset(t, 0, sizeof(t));
+		 
 		for(uint i = 0; i < d; ++i){
 			uint cid = hf->Str2Int(str, i)%w;
 			t[i] = sketch[i][cid];
@@ -52,7 +52,7 @@ uint PSketch::Query(cuc *str, bool ml){
 }
 
 void PSketch::PrintCounter(cuc* str){
-	memset(t, 0, sizeof(t));
+	 
 	for(uint i = 0; i < d; ++i){
 		uint cid = hf->Str2Int(str, i)%w;
 		t[i] = sketch[i][cid];

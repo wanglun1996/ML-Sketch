@@ -85,7 +85,7 @@ uint CUSketch::Query(cuc *str, bool ml){
 
 void CUSketch::PrintCounter(cuc* str, uint acc_val){
 	memset(t, 0, sizeof(t));
-
+	
 	for(uint i = 0; i < d; ++i){
 		uint cid = hf->Str2Int(str, i)%w;
 		t[i] = sketch[i][cid];
